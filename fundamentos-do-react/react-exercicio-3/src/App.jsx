@@ -1,35 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Profile from "./assets/components/Profile";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="app">
+      <Profile
+        avatar="https://s2.glbimg.com/hVMpAeY0rBQoH7HJB8EAcuj_ozI=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2022/m/d/anTjJ9RdAtAzpHlf6b0Q/filme-avatar-1.png"
+        name="John Doe"
+        bio="Full-stack javascript developer"
+        email="ytalomateus87@gmail.com"
+        phone="+7999999999"
+        githubUrl="https://github.com"
+        linkedinUrl="https://linkedin.com"
+        twitterUrl="https://twitter.com"
+     />
+    </div>
   )
 }
-
-export default App
