@@ -1,14 +1,12 @@
 import { React } from 'react';
-
-function HelloWorld() {
-  return <h1>Hello World</h1>
-}
+import Planets from './components/planets';
+import Planet from './components/planet';
 
 
 function App() {
   return (
   <div>
-    <HelloWorld/>
+   <Planets/>
   </div>
   );
 }
