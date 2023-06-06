@@ -1,14 +1,21 @@
 import React, { Fragment } from 'react';
 
-
 const DescriptionWithLink = (props) => {
-  return (
-    <Fragment>
-      <p>{props.description}</p>
-      <p><a href={props.link}>click aqui veja mais</a></p>
+  if (props.link) {
+    return (
+      <Fragment>
+        <p>{props.description}</p>
+        <p><a href={props.link}>click aqui veja mais</a></p>
 
-    </Fragment>
-  )
+      </Fragment>
+    )
+  } else {
+    return (
+      <Fragment>
+        <p><u>{props.description}</u></p>
+      </Fragment>
+    )
+  }
+
 }
-
 export default DescriptionWithLink
