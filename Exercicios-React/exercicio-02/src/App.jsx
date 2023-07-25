@@ -1,6 +1,6 @@
 import Title from "./components/Title"
 import Staus from "./components/staus"
-
+import Appmudule from "./App.module.css"
 
 
 
@@ -8,9 +8,12 @@ import Staus from "./components/staus"
 function App() {
 
   return (
-    <div>
+    <div
+      className={Appmudule.app}
+    >
       <Title />
       <Staus />
+
     </div>
   )
 }
