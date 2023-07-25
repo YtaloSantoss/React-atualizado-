@@ -1,15 +1,15 @@
-import posterImg from "../../assets/imageee.jpg"
+import Button from "../Button"
 import styles from "./styles.module.css"
 
 
-export default function Card() {
+export default function Card(props) {
   return (
     <div className={styles.container}>
-      <img style={{ width: "300px", height: "auto", }} className={styles.poster} src={posterImg} alt="" />
+      <img style={{ width: "300px", height: "auto", }} className={styles.poster} src={props.posterImg} alt={props.title} />
       <div>
-        <h2>Quadro Pintado</h2>
-        <p>Um quadro pintador por Artista desconhecido</p>
-        <button>Compre agora</button>
+        <h2>{props.title}</h2>
+        <p>Um quadro pintado por Artista desconhecido</p>
+        <Button />
       </div>
     </div>
   )
