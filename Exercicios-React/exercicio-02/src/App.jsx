@@ -1,12 +1,16 @@
-function sun(a, b) {
-  return a + b
-}
+import Title from "./components/Title"
+import Staus from "./components/staus"
+
+
+
+
 
 function App() {
-  const tech = "Java Script"
+
   return (
     <div>
-      <h1>{tech} + React ... {sun(1, 1)}</h1>
+      <Title />
+      <Staus />
     </div>
   )
 }
