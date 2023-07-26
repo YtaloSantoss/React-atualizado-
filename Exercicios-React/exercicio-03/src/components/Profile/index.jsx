@@ -1,3 +1,5 @@
+import Buttton from "../LinksButton"
+import ProfileSection from "../ProfileSection"
 import Title from "../Title"
 import styles from "./styles.module.css"
 
@@ -9,14 +11,17 @@ export default function Profile(props) {
         {props.name}
         <button>Follow</button>
       </Title>
-      <div>{props.bio}</div>
-      <div>{props.phone}</div>
-      <div>{props.email}</div>
-      <div className={styles.links}>
-        <a href={props.githubUrl} target="_blank">GitHub</a>
-        <a href={props.linkdinUrl} target="_blank">LinkdIn</a>
-        <a href={props.twitterUrl} target="_blank">Twitter</a>
-      </div>
+      <ProfileSection>{props.bio}</ProfileSection>
+      <ProfileSection>{props.phone}</ProfileSection>
+      <ProfileSection>{props.email}</ProfileSection>
+      <ProfileSection>
+        <div className={styles.links}>
+          <Buttton href={props.githubUrl}>GitHub</Buttton>
+          <Buttton href={props.linkdinUrl}>LinkdIn</Buttton>
+          <Buttton href={props.twitterUrl}>Twitter</Buttton>
+        </div>
+      </ProfileSection>
+
     </div>
   )
 }
