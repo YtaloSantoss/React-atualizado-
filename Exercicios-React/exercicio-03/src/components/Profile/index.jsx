@@ -1,9 +1,17 @@
+import { useState } from "react"
 import Buttton from "../LinksButton"
 import ProfileSection from "../ProfileSection"
 import Title from "../Title"
 import styles from "./styles.module.css"
 
 export default function Profile(props) {
+  const state = useState("Follow")
+
+  function handleClick(ev) {
+    alert("Você agora está seguindo")
+    state[1]("Following")
+  }
+
   return (
     <div className={styles.container} >
       <img className={styles.avatar} src={props.avatar} alt={props.name} />
@@ -11,9 +19,9 @@ export default function Profile(props) {
         {props.name}
         <button
           className={styles.follwButton}
-          onClick={() => alert("Você está seguindo")}
+          onClick={handleClick}
         >
-          Follow
+          {state[0]}
         </button>
       </Title>
       <ProfileSection>{props.bio}</ProfileSection>
