@@ -37,15 +37,22 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+label{
+  color: #1a1a1a;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+button,
+ input{
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid black;
   padding: 0.6em 1.2em;
   margin: 2rem;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #dddddd;
   cursor: pointer;
   transition: border-color 0.25s;
   margin-right: 1rem;
