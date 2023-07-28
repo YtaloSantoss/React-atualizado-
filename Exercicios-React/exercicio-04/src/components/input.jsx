@@ -1,8 +1,12 @@
+import PropsType from 'prop-types'
 
+Input.protoType = {
+  passwordSize: PropsType.number.isRequired,
+  setPasswordSize: PropsType.func
+}
 
 
 export default function Input(props) {
-
 
   return (
 
@@ -14,4 +18,5 @@ export default function Input(props) {
       onChange={(ev) => props.setPasswordSize(ev.target.value)}
     />
   )
+
 }

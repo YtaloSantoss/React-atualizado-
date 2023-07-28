@@ -5,6 +5,7 @@ function App() {
   const [password, setPassword] = useState("")
   const [copyText, setCopyText] = useState("Copiar")
   const [passwordSize, setPasswordSize] = useState(12)
+  const [showInput, setShowInput] = useState(false)
 
   function generate() {
     const characters = "'1234567890-=!@#$%¨&*()_+qwertyuiop[asdfghjklç~]zxcvbnm,.;/QWERTYUIOP{ASDFGHJKLÇ^}ZXCVBNM<>:?"
