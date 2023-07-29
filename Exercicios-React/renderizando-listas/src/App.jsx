@@ -73,9 +73,19 @@ const games = [
 
 function App() {
   return (
-    <div className="app">
+    <div id="app" style={{ padding: "0 4rem 4rem" }}>
       <h1>Meus Jogos</h1>
-
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "4rem" }}>
+        {games.map((game) => {
+          return (
+            <div key={game.id}>
+              <img src={game.coverImage} alt="" style={{ width: "20rem", objectFit: "cover" }} />
+              <h2>{game.title}</h2>
+              <p>{game.description}</p>
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }
