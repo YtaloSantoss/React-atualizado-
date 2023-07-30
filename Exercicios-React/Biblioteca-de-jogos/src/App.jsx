@@ -1,4 +1,6 @@
 import { useState } from "react"
+import Game from "./components/Game"
+import NewGameForm from "./components/NewGameFArm"
 
 
 
@@ -10,8 +12,6 @@ function App() {
     return gameArray
 
   })
-  const [title, setTitle] = useState("")
-  const [cover, setCover] = useState("")
 
 
   const addGame = ({ title, cover }) => {
@@ -34,51 +34,18 @@ function App() {
 
   }
 
-  const handleSubmit = (ev) => {
-    ev.preventDefault()
-    addGame({ title, cover })
-    setTitle("")
-    setCover("")
-
-  }
-
-
-
   return (
     <div id="app">
       <h1>Biblioteca de Jogos</h1>
-      <form onSubmit={handleSubmit} >
-        <div>
-          <label htmlFor="title">Title: </label>
-          <input
-            type="text"
-            name="title"
-            id="title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="cover">Capa: </label>
-          <input
-            type="text"
-            name="cover"
-            id="cover"
-            value={cover}
-            onChange={(e) => setCover(e.target.value)}
-          />
-        </div>
-        <button type="submit">Adicionar à biblioteca</button>
-      </form>
+      <NewGameForm addGame={addGame} />
       <div className="games">
         {games.map((game) => (
-          <div key={game.id}>
-            <img src={game.cover} alt="" />
-            <div>
-              <h2>{game.title}</h2>
-              <button onClick={() => removeGame(game.id)}>Remover</button>
-            </div>
-          </div>
+          <Game
+            key={game.id}
+            title={game.title}
+            cover={game.cover}
+            onRemove={() => removeGame(game.id)}
+          />
         ))}
       </div>
     </div>
