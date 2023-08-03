@@ -1,3 +1,4 @@
+import UserInfo from "./components/UserInfo";
 import UserContext from "./contexs/UseContext";
 
 
@@ -12,6 +13,7 @@ function App() {
   return (
     <UserContext.Provider value={user}>
       <h1>Usando useContext</h1>
+      <UserInfo />
     </UserContext.Provider>
   )
 }
